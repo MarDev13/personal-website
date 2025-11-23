@@ -3,6 +3,34 @@ import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 import Divider from '../components/Divider.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: "Bumerania Robotics",
+    description:
+      "Diseño, arquitectura UX y desarrollo completo de la landing corporativa para la presentación de robots autónomos, optimizada para SEO, captación de leads y rendimiento.",
+    image: "/imagenes/bumerania.png",
+    link: "https://robot-room-service.es/",
+    badges: ["Astro", "Tailwind", "SEO", "UX/UI"],
+  },
+  {
+    title: "Nexadrone — Servicios y Venta de Drones",
+    description:
+      "Diseño, estructura UX y desarrollo completo de la web corporativa y tienda online, incluyendo catálogo de drones, blog, formularios y optimización SEO orientada a conversión.",
+    image: "/imagenes/nexadrone.png",
+    link: "https://tonydrone.elultimoideario.com/",
+    badges: ["WordPress", "WooCommerce", "SEO", "UX/UI", "Elementor"],
+  },
+  {
+    title: "El Último Ideario — Diseño & Desarrollo Web",
+    description:
+      "Co-creación de la identidad visual y desarrollo del sitio web del estudio creativo, incluyendo estructura UX, animaciones, responsive design y componentes reutilizables basados en la marca.",
+    image: "/imagenes/elultimoideario.png",
+    link: "https://elultimoideario.com/",
+    badges: ["Astro", "Tailwind", "Animaciones CSS", "Responsive UI"],
+  },
+];
 
 ---
 
@@ -10,4 +38,11 @@ import Divider from '../components/Divider.astro';
 	<Navbar/>
 	<Hero/>
 	<Divider label="Projects"/>
+	
+	 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 max-w-6xl mx-auto px-6 py-3">
+    {projects.map((project) => (
+      <ProjectCard {...project} />
+    ))}
+  </div>
+
 </Layout>

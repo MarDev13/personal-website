@@ -1,0 +1,49 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+  badges?: string[];
+}
+
+const {
+  title,
+  description,
+  image,
+  link = "#",
+  badges = [],
+} = Astro.props;
+---
+
+<article class="flex flex-col overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg h-full">
+  <a href={link} target="_blank" rel="noopener noreferrer">
+    <img src={image} alt={title} class="h-56 w-full object-cover" />
+  </a>
+
+  <div class="flex flex-col flex-1 bg-white p-4 sm:p-6">
+    <h3 class="mt-0.5 text-lg text-gray-900">{title}</h3>
+
+    <p class="mt-2 text-sm text-gray-500">{description}</p>
+
+    
+    <div class="mt-auto pt-4">
+      <div class="flex flex-wrap gap-2 mb-4">
+        {badges.map(badge => (
+          <span class="inline-block rounded-md bg-gray-100 px-3 py-1 text-xs text-gray-600">
+            {badge}
+          </span>
+        ))}
+      </div>
+
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm font-medium text-[#C4AC92] hover:opacity-75 transition"
+      >
+        Visitar web →
+      </a>
+    </div>
+  </div>
+</article>
