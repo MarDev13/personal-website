@@ -1,0 +1,124 @@
+---
+import {  siGithub, siGmail, siWhatsapp } from "simple-icons";
+---
+
+<section id="contact" class="px-6 py-10">
+  
+
+
+  <form
+  action="#"
+  class="mx-auto grid max-w-lg grid-cols-1 gap-4 rounded-lg border border-gray-200 bg-gray-100 p-6 sm:grid-cols-2"
+>
+  <div class="sm:col-span-2">
+    <label class="block text-sm font-medium text-gray-900" for="name">Nombre</label>
+    <input
+      class="mt-1 w-full rounded-md py-2 px-2 border border-gray-200 focus:border-[#C4AC92] focus:outline-none"
+      id="name"
+      type="text"
+      placeholder="Tu nombre"
+    />
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-gray-900" for="email">Correo electrónico</label>
+    <input
+      class="mt-1 w-full rounded-md py-2 px-2 border border-gray-200 focus:border-[#C4AC92] focus:outline-none"
+      id="email"
+      type="email"
+      placeholder="Tu correo"
+    />
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-gray-900" for="phone">Teléfono</label>
+    <input
+      class="mt-1 w-full rounded-md py-2 px-2 border border-gray-200 focus:border-[#C4AC92] focus:outline-none"
+      id="phone"
+      type="tel"
+      placeholder="Tu número"
+    />
+  </div>
+
+  <div class="sm:col-span-2">
+    <label class="block text-sm font-medium text-gray-900" for="message">Mensaje</label>
+    <textarea
+      class="mt-1 w-full resize-none rounded-md py-2 px-2 border border-gray-200 focus:border-[#C4AC92] focus:outline-none"
+      id="message"
+      rows="4"
+      placeholder="Escribe tu mensaje aquí"
+    ></textarea>
+  </div>
+
+  <div class="sm:col-span-2 items-center justify-center flex py-2">
+    <button
+      class="inline-flex items-center justify-center rounded-md border border-[#C4AC92] bg-[#C4AC92] px-6 py-2 text-sm font-medium text-white transition hover:bg-white hover:text-[#C4AC92]"
+      type="submit"
+    >
+      Enviar mensaje
+    </button>
+  </div>
+</form>
+
+
+
+<div class="mt-8 flex flex-wrap justify-center gap-3">
+
+  <a
+    href="https://wa.me/34615512124"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-1.5 text-sm text-gray-700 hover:border-[#C4AC92] hover:text-[#C4AC92] transition"
+  >
+    <span
+      class="inline-block size-4"
+      set:html={siWhatsapp.svg}
+    />
+    WhatsApp
+  </a>
+
+
+  <a
+    href="mailto:mardevvdesign@gmail.com"
+    class="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-1.5 text-sm text-gray-700 hover:border-[#C4AC92] hover:text-[#C4AC92] transition"
+  >
+    <span
+      class="inline-block size-4"
+      set:html={siGmail.svg}
+    />
+    Gmail
+  </a>
+
+
+  <a
+    href="https://www.linkedin.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-1.5 text-sm text-gray-700 hover:border-[#C4AC92] hover:text-[#C4AC92] transition"
+  >
+    <svg
+      class="size-4"
+      viewBox="0 0 24 24"
+      
+    >
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.135 1.446-2.135 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.369-1.85 3.602 0 4.27 2.37 4.27 5.455v6.286zM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zM7.119 20.452H3.553V9h3.566v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+    </svg>
+    LinkedIn
+  </a>
+
+
+  <a
+    href="https://github.com/MarDev13"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-1.5 text-sm text-gray-700 hover:border-[#C4AC92] hover:text-[#C4AC92] transition"
+  >
+    <span
+      class="inline-block size-4"
+      set:html={siGithub.svg}
+    />
+    GitHub
+  </a>
+</div>
+
+</section>
