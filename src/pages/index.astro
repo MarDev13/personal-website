@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 import Divider from '../components/Divider.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import Experience from '../components/Experience.astro';
 
 const projects = [
   {
@@ -39,10 +40,11 @@ const projects = [
 	<Hero/>
 	<Divider label="Projects"/>
 	
-	 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 max-w-6xl mx-auto px-6 py-3">
+	 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 max-w-6xl mx-auto px-6 py-3 mb-20">
     {projects.map((project) => (
       <ProjectCard {...project} />
     ))}
   </div>
-
+  <Divider label="Experiencia"/ class="mt-20"/>
+<Experience/>	
 </Layout>
