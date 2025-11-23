@@ -1,1 +1,28 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+#mobile-menu-btn .line-1 {
+  transform: translateY(-6px);
+}
+
+#mobile-menu-btn .line-2 {
+  transform: translateY(0);
+}
+
+#mobile-menu-btn .line-3 {
+  transform: translateY(6px);
+}
+
+
+#mobile-menu-btn.is-open .line-1 {
+  transform: translateY(0) rotate(45deg);
+}
+
+#mobile-menu-btn.is-open .line-2 {
+  opacity: 0;
+}
+
+#mobile-menu-btn.is-open .line-3 {
+  transform: translateY(0) rotate(-45deg);
+}
