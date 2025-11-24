@@ -42,20 +42,20 @@ const projects = [
 <Layout>
 	<Navbar/>
 	<Hero/>
-	<Divider label="Projects"/>
+	<Divider label="Proyectos" id="proyectos"/>
 	
 	 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 max-w-6xl mx-auto px-6 py-3 mb-20">
     {projects.map((project) => (
       <ProjectCard {...project} />
     ))}
   </div>
-  <Divider label="Experiencia"/ class="mt-20"/>
+  <Divider label="Experiencia" id="experiencia" class="mt-20"/>
 <Experience/>	
-<Divider label="Skills"/>
+<Divider label="Skills" id="skills"/>
 <Skills/>
-<Divider label="Formación" />
+<Divider label="Formación" id="formacion" />
 <Training/>
-<Divider label="Contacto"/>
+<Divider label="Contacto" id="contacto"/>
 <Contact/>
 <Footer/>
 </Layout>
